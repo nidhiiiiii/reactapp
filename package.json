@@ -14,7 +14,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "build": "REACT_APP_FIREBASE_API_KEY=your_api_key ,REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain react-scripts build",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
