@@ -10,7 +10,7 @@ import 'firebase/analytics';
 // import 'firebase/auth';
 import {useAuthState} from 'react-firebase-hooks/auth';
 import {useCollectionData} from 'react-firebase-hooks/firestore'
-import { Timestamp } from 'firebase/firestore';
+// import { Timestamp } from 'firebase/firestore';
 
 // require('dotenv').config();
 firebase.initializeApp({
@@ -109,7 +109,7 @@ return(
 }
 //this has to print message
 function ChatMessage(props){
-  const{text,uid,photoURL,serverTimestamp}=props.message;
+  const{text,uid,photoURL}=props.message;
   const messageClass =uid === auth.currentUser.uid ?'sent':'recived'
   return(
     <>
