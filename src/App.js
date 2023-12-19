@@ -109,14 +109,18 @@ return(
 }
 //this has to print message
 function ChatMessage(props){
-  const{text,uid,photoURL}=props.message;
+  const{text,uid,photoURL,createdAt}=props.message;
   const messageClass =uid === auth.currentUser.uid ?'sent':'recived'
+  
+  // const date=createdAt.toDate();
+  // const dateString=date.toLocaleString();
+  const timestamp=createdAt?.toDate().toLocaleString();
   return(
     <>
     <div className={`message ${messageClass}`}>
       <img src={photoURL} alt='whois this'/>
       <p>{text}</p>
-      {/* <p>{serverTimestamp}</p> */}
+      <p>{timestamp}</p>
     </div>
     </>
   )
